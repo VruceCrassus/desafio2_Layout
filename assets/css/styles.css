@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main {
+  grid-area: main;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+/*   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); */
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  justify-content: space-around;
+} 
+
+.card-container {
+	gap: 20px;
+	padding: 20px;
+}
+
+.card img {
+    width: 250px;
+    height: 300px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card-description{
+    margin-top: 5px;
+    padding: auto;
+}
+
+.card-price{
+        font-weight: bold;
+        margin-top: 5px;
+}
+
+.card-btn{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn-add {
+	border: none;
+	background-color: #383cb6;
+	color: white;
+	padding: 10px 20px;
+    margin: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn-view {
+	border: none;
+	background-color: #37474f;
+	color: white;
+	padding: 10px 20px;
+    margin: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  
+}
